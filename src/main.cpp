@@ -48,7 +48,7 @@ void visualizeInputsFromBlob(const cv::Mat& inputBlob, bool normalizeFlag, cv::S
 		if(normalizeFlag) cv::normalize(img, img, 0, 1, cv::NORM_MINMAX);
 
 		//Display
-		cv::imshow("image_"+s, img);
+		cv::imshow("image_", img);
 		cv::waitKey(0);
 
 	}//blobs
