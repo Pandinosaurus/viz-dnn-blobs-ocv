@@ -23,7 +23,7 @@ In a nutshell, we are going to:
 
 ## Requirements :
 ### Compile :
-  - CMake (>= 2.8)
+  	- CMake (>= 2.8)
 ### Libraries :
 	- OpenCV (>= 3.4)
 ### OS:
