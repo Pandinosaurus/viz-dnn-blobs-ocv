@@ -26,7 +26,7 @@ In a nutshell, we are going to:
 ### Libraries :
 	- OpenCV (>= 3.4)
 ### OS:
-	- Windows 10 with Visual Studio 2017 (you may need to change the relative paths on Unix)
+	- Windows 10 with Visual Studio 2017 (you may need to change the relative paths on Unix, check cmake list and code!)
 ### Data :
 	- The /data/ folder provides you with almost everything you need to get started but the trained model (bvlc_googlenet.caffemodel). 
 	You can download it from : https://github.com/BVLC/caffe/tree/master/models/bvlc_googlenet.
