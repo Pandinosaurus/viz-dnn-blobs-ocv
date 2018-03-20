@@ -1,6 +1,6 @@
 # Presentation
 A tutorial to visualize with OpenCV the deep learning blobs generated with the OpenCV dnn module.
-This an increment of (https://github.com/Pandinosaurus/visualizeDnnBlobs). The new code now uses the recently added dnn::imagesFromBlob method.
+This is an increment of (https://github.com/Pandinosaurus/visualizeDnnBlobs). The new code now uses the recently added dnn::imagesFromBlob method.
 
 
 <a> <img src="./results/output0.jpg" align="center" height="25%" width="25%"> <img src="./results/output1.jpg" align="center" height="25%" width="25%"> <img src="./results/output2.jpg" align="center" height="25%" width="25%"> </a>
@@ -8,7 +8,6 @@ This an increment of (https://github.com/Pandinosaurus/visualizeDnnBlobs). The n
 
 ## Purpose :
 An easy way to visualize the output blobs of each layer of a Deep Convolutional Neural Network with OpenCV.(https://github.com/opencv/opencv).
-This is an update of the last visualizeDnnBlobs (https://github.com/Pandinosaurus/visualizeDnnBlobs) since a currated imagesFromBlob method is now integrated to the dnn module of OpenCV.
 
 ## What :
 The dnn::imagesFromBlob method from the dnn module in OpenCV allows you to retrieve the images contained in a blob so that you can use them with OpenCV like you have the habit to do.
