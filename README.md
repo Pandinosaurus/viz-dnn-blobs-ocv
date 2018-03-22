@@ -1,5 +1,5 @@
 # Presentation
-A tutorial to visualize with OpenCV the deep learning blobs generated with the OpenCV dnn module.
+A tutorial to visualize in C++ with OpenCV the deep learning blobs generated with the OpenCV dnn module.
 This is an increment of (https://github.com/Pandinosaurus/visualizeDnnBlobs). The new code now uses the recently added dnn::imagesFromBlob method.
 
 
