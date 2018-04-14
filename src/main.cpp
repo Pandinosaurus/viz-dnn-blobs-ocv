@@ -104,7 +104,7 @@ void visualizAllChannelsFromAllBlobsInNet(Net& net, bool normalizeFlag, cv::Mat 
 					cv::applyColorMap(channel, channel, cv::COLORMAP_JET);
 
 					//Display
-                    cv::imwrite("../"+layer + ".jpg", channel);
+                                        cv::imwrite("../"+layer + ".jpg", channel);
 					cv::imshow(layer + " : output", channel);
 					cv::waitKey(0);
 
