@@ -24,7 +24,7 @@ In a nutshell, we are going to:
 ### Compile :
   	- CMake (>= 2.8)
 ### Libraries :
-	- OpenCV (>= 3.4)
+	- OpenCV (>= 3.4.1)
 ### OS:
 	- Windows 10 with Visual Studio 2017 (you may need to change the relative paths on Unix, check cmake list and code!)
 ### Data :
