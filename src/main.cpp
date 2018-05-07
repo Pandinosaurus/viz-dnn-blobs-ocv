@@ -3,7 +3,7 @@ File : main.cpp
 Author : Rémi Ratajczak
 E-mail : Remi.Ratjczak@gmail.com
 License : MIT
-
+Requirements : OpenCV >= 3.4.1
 This program demosntrates how to use the imagesFromBlob() method from the OpenCV dnn module.
 This method returns a 2D array per image in the batch.
 Each channel for each image equals the result of a filter activation.
