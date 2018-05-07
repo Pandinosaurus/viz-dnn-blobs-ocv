@@ -35,7 +35,7 @@ std::string sep = "\\";
 std::string sep = "/"; //default
 #endif
 
-void visualizeInputsFromBlob(const cv::Mat& inputBlob, bool normalizeFlag, cv::Size size, double scaleFactor, cv::Scalar mean = cv::Scalar(-1,-1,-1))
+void visualizeImagesInInputBlob(const cv::Mat& inputBlob, bool normalizeFlag, cv::Size size, double scaleFactor, cv::Scalar mean = cv::Scalar(-1,-1,-1))
 {
 	// A simple vector tha image (i.e. the result of each operation in the layer)
 	std::vector<cv::Mat> vectorOfInputImagesFromBlob;
@@ -62,7 +62,7 @@ void visualizeInputsFromBlob(const cv::Mat& inputBlob, bool normalizeFlag, cv::S
 	}// blobs
 }
 
-void visualizAllChannelsFromAllBlobsInNet(Net& net, bool normalizeFlag, cv::Mat inputBlob, cv::Size size, double scaleFactor, cv::Scalar mean = cv::Scalar(-1))
+void visualizFeaturesFromAllBlobsInNet(Net& net, bool normalizeFlag, cv::Mat inputBlob, cv::Size size, double scaleFactor, cv::Scalar mean = cv::Scalar(-1))
 {
 	// For each layer in the network, we are going to perform a forward pass, retrieve the output blobs and extract the images from them
 	for (string layer : net.getLayerNames())
@@ -178,11 +178,14 @@ int main(int argc, char **argv)
 
 	// Visualize the inputs
 	// gather the input Mat for the inputBlob, it should looks like (i.e. being equal to) the the original after normalization
-	visualizeInputsFromBlob(inputBlob, true, img.size(), 1.0f, cv::Scalar(104, 117, 123));
+	visualizeImagesInInputBlob(inputBlob, true, img.size(), 1.0f, cv::Scalar(104, 117, 123));
 
 	// Visualize the ouput of each layer (i.e. the features map)
+	// For each layer,
 	// Each feature map will be represented by a channel in a cv::Mat datastorage thanks to dnn::imagesFromBlob
-	visualizAllChannelsFromAllBlobsInNet(net, true, inputBlob, img.size(), -1, cv::Scalar(-1));
+	// --> We only need to display these channels
+	// In this method, a per feature normalization is made
+	visualizFeaturesFromAllBlobsInNet(net, true, inputBlob, img.size(), -1, cv::Scalar(-1));
 
 	return 0;
 } //main
